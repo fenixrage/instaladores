@@ -1,0 +1,51 @@
+#!/bin/bash
+function instalacion {
+sudo apt-get update
+
+echo "                                                     "
+echo "---------------------Paso completado-----------------"
+echo "                                                     "
+
+sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+
+echo "                                                     "
+echo "---------------------Paso completado-----------------"
+echo "                                                     "
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+echo "                                                     "
+echo "---------------------Paso completado-----------------"
+echo "                                                     "
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+echo "                                                     "
+echo "---------------------Paso completado-----------------"
+echo "                                                     "
+
+deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+
+echo "                                                     "
+echo "---------------------Paso completado-----------------"
+echo "                                                     "
+
+sudo apt update
+
+echo "                                                     "
+echo "---------------------Paso completado-----------------"
+echo "                                                     "
+apt-cache policy docker-ce
+
+echo "                                                     "
+echo "---------------------Paso completado-----------------"
+echo "                                                     "
+sudo apt-get -y install docker-ce docker-compose docker-ce-cli containerd.io
+
+echo "                                                     "
+echo "---------------------Paso completado-----------------"
+echo "                                                     "
+
+}
+
+instalacion
